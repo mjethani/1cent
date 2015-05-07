@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "1cent",
+  "description": "Make 1-cent donations to your favorite websites",
+  "version": "1.0",
+  "short_name": "1cent",
+  "permissions": [
+    "storage"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "content_scripts": [{
+    "matches": [
+      "https://*/*"
+    ],
+    "js": [
+      "buffer.min.js",
+      "bitcoinjs.min.js",
+      "util.js",
+      "content.js"
+    ]
+  }]
+}
